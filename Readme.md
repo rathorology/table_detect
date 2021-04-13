@@ -40,7 +40,7 @@ pip install pillow
 pip install lxml
 pip install jupyter
 pip install matplotlib
-
+sudo apt-get install python3-tk
 ```
 
 
@@ -107,7 +107,7 @@ clone tensorflow models repository in the workspace `tensorflow_model` and insta
 
 ```
 $ git clone https://github.com/tensorflow/models.git
-$ cd models/reasearch
+$ cd models/research/
 $ protoc object_detection/protos/*.proto --python_out=.
 $ pip install tf_slim
 $ pip install pandas
@@ -117,7 +117,7 @@ $ pip install pandas
 Copy `models/research/official` and `models/research/object_detection` from `tensorflow_model/models` to workspace  home directory that is `tensorflow_model`
 
 ```
-cp -r models/research/official .
+cp -r models/official .
 cp -r models/research/object_detection   .
 
 ```

@@ -203,24 +203,6 @@ def all_traingles(out_traingles=None):
     return trgs, s_max
 
 
-# def get_actual_bb(box_corners, img):
-#     out_triangles_left, out_triangles_right = compute_left_right_trgs_from_table(box_corners, img)
-#     left_trgs, s_max_left = all_traingles(out_triangles_left)
-#     right_trgs, s_max_right = all_traingles(out_triangles_right)
-#
-#     # Draw Rect
-#     bl = box_corners[0]
-#     br = box_corners[3]
-#     tl = s_max_left[1][1][0]  # Can change this if needed
-#     tr = s_max_right[1][1][0]  # Can change this if needed
-#
-#     # To draw
-#     pts = np.array([bl, tl, tr, br], np.int32)
-#     pts = pts.reshape((-1, 1, 2))
-#     display(cv2.polylines(img, [pts], True, (0, 0, 0)))
-#     return [tl, tr, br, bl]
-
-
 def get_actual_bb(box_corners, img):
     out_triangles_left, out_triangles_right = compute_left_right_trgs_from_table(box_corners, img)
     left_trgs, s_max_left = all_traingles(out_triangles_left)
@@ -259,27 +241,17 @@ def get_actual_bb(box_corners, img):
     # To draw
     pts = np.array([bl, tl, tr, br], np.int32)
     pts = pts.reshape((-1, 1, 2))
-    cv2.polylines(img, [pts], True, (255, 255, 0),thickness=2)
+    cv2.polylines(img, [pts], True, (255, 255, 0), thickness=2)
     # display(cv2.polylines(img, [pts], True, (0, 0, 0)))
     return [bl, tl, tr, br]
 
 
-# List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = 'training/object-detection.pbxt'
-category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS, use_display_name=True)
+def infer_wrapper(image_path):
+    detection_model = load_model()
+    # print(detection_model.signatures['serving_default'].inputs)
+    # print(detection_model.signatures['serving_default'].output_dtypes)
+    # print(detection_model.signatures['serving_default'].output_shapes)
 
-# If you want to test the code with
-# images, just add path to the images to the TEST_IMAGE_PATHS.
-PATH_TO_TEST_IMAGES_DIR = pathlib.Path('images/validation')
-TEST_IMAGE_PATHS = sorted(list(PATH_TO_TEST_IMAGES_DIR.glob("*.jpg")))
-print(TEST_IMAGE_PATHS)
-
-detection_model = load_model()
-
-print(detection_model.signatures['serving_default'].inputs)
-print(detection_model.signatures['serving_default'].output_dtypes)
-print(detection_model.signatures['serving_default'].output_shapes)
-for image_path in TEST_IMAGE_PATHS:
     try:
         st = time.time()
         # the array based representation of the image will be used later in order to prepare the
@@ -296,13 +268,31 @@ for image_path in TEST_IMAGE_PATHS:
                        (int(xmax), int(ymax))]  # bl, tl, tr, br
         initial_box = [(int(xmin), int(ymin)), (int(xmax), int(ymin)),
                        (int(xmax), int(ymax)), (int(xmin), int(ymax))]  # tl, tr, br,bl
-        act_box_corners = get_actual_bb(box_corners, img)
+        the_box = get_actual_bb(box_corners, img)
 
         cv2.imwrite('images/results/' + str(image_path).split("/")[-1], cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
         print("Initial  = ", initial_box)
 
-        print("Corniates = ", act_box_corners)
+        print("Corniates = ", the_box)
         print(
             "############################################################################################################")
     except Exception as e:
+        the_box = list()
         pass
+    return the_box
+
+
+if __name__ == '__main__':
+    # # List of the strings that is used to add correct label for each box.
+    # PATH_TO_LABELS = 'training/object-detection.pbxt'
+    # category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS, use_display_name=True)
+
+    # If you want to test the code with
+    # images, just add path to the images to the TEST_IMAGE_PATHS.
+    PATH_TO_TEST_IMAGES_DIR = pathlib.Path('images/validation')
+    TEST_IMAGE_PATHS = sorted(list(PATH_TO_TEST_IMAGES_DIR.glob("*.jpg")))
+    print(TEST_IMAGE_PATHS)
+    for image_path in TEST_IMAGE_PATHS:
+        s = time.time()
+        infer_wrapper(image_path)
+        print(time.time() - s)

@@ -28,7 +28,7 @@ tf.gfile = tf.io.gfile
 
 
 def display(img):
-    plt.rcParams["figure.figsize"] = (100, 100)
+    # plt.rcParams["figure.figsize"] = (100, 100)
     plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
     plt.show()
 
@@ -203,6 +203,24 @@ def all_traingles(out_traingles=None):
     return trgs, s_max
 
 
+# def get_actual_bb(box_corners, img):
+#     out_triangles_left, out_triangles_right = compute_left_right_trgs_from_table(box_corners, img)
+#     left_trgs, s_max_left = all_traingles(out_triangles_left)
+#     right_trgs, s_max_right = all_traingles(out_triangles_right)
+#
+#     # Draw Rect
+#     bl = box_corners[0]
+#     br = box_corners[3]
+#     tl = s_max_left[1][1][0]  # Can change this if needed
+#     tr = s_max_right[1][1][0]  # Can change this if needed
+#
+#     # To draw
+#     pts = np.array([bl, tl, tr, br], np.int32)
+#     pts = pts.reshape((-1, 1, 2))
+#     display(cv2.polylines(img, [pts], True, (0, 0, 0)))
+#     return [tl, tr, br, bl]
+
+
 def get_actual_bb(box_corners, img):
     out_triangles_left, out_triangles_right = compute_left_right_trgs_from_table(box_corners, img)
     left_trgs, s_max_left = all_traingles(out_triangles_left)
@@ -211,21 +229,47 @@ def get_actual_bb(box_corners, img):
     # Draw Rect
     bl = box_corners[0]
     br = box_corners[3]
-    tl = s_max_left[1][1][0]  # Can change this if needed
+    tl = s_max_left[2][1][0]  # Can change this if needed
     tr = s_max_right[1][1][0]  # Can change this if needed
+
+    # Distance check
+    dist_x = []
+    max_x = 0
+    max_i = None
+
+    for i in s_max_left:
+        for j in s_max_right:
+            dist_x.append({(j[1][0][0] - i[1][0][0]): (i[1][0][0], j[1][0][0])})
+
+            if (j[1][0][0] - i[1][0][0]) > max_x:
+                max_x = (j[1][0][0] - i[1][0][0])
+                max_i = (i[1][0][0], j[1][0][0])
+
+    # for p in dist_x:
+    #     tl = (list(p.values())[0][0], box_corners[1][1])
+    #     tr = (list(p.values())[0][1], box_corners[2][1])
+    #     # To draw
+    #     pts = np.array([bl, tl, tr, br], np.int32)
+    #     pts = pts.reshape((-1, 1, 2))
+    #     cv2.polylines(img, [pts], True, (0, 0, 0))
+    # display(img)
+    tl = (max_i[0], box_corners[1][1])
+    tr = (max_i[1], box_corners[2][1])
 
     # To draw
     pts = np.array([bl, tl, tr, br], np.int32)
     pts = pts.reshape((-1, 1, 2))
-    display(cv2.polylines(img, [pts], True, (0, 0, 0)))
-    return [tl, tr, br, bl]
+    cv2.polylines(img, [pts], True, (255, 255, 0),thickness=2)
+    # display(cv2.polylines(img, [pts], True, (0, 0, 0)))
+    return [bl, tl, tr, br]
 
 
 # List of the strings that is used to add correct label for each box.
 PATH_TO_LABELS = 'training/object-detection.pbxt'
 category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS, use_display_name=True)
 
-# If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.
+# If you want to test the code with
+# images, just add path to the images to the TEST_IMAGE_PATHS.
 PATH_TO_TEST_IMAGES_DIR = pathlib.Path('images/validation')
 TEST_IMAGE_PATHS = sorted(list(PATH_TO_TEST_IMAGES_DIR.glob("*.jpg")))
 print(TEST_IMAGE_PATHS)
@@ -236,24 +280,29 @@ print(detection_model.signatures['serving_default'].inputs)
 print(detection_model.signatures['serving_default'].output_dtypes)
 print(detection_model.signatures['serving_default'].output_shapes)
 for image_path in TEST_IMAGE_PATHS:
-    st = time.time()
-    # the array based representation of the image will be used later in order to prepare the
-    # result image with boxes and labels on it.
-    img = np.array(Image.open(image_path))
-    # Actual detection.
-    output_dict = run_inference_for_single_image(detection_model, img)
+    try:
+        st = time.time()
+        # the array based representation of the image will be used later in order to prepare the
+        # result image with boxes and labels on it.
+        img = np.array(Image.open(image_path))
+        # Actual detection.
+        output_dict = run_inference_for_single_image(detection_model, img)
 
-    # print(output_dict['detection_boxes'])
-    rect_box = output_dict['detection_boxes'][0] * np.array(
-        [img.shape[0], img.shape[1], img.shape[0], img.shape[1]])
-    ymin, xmin, ymax, xmax = rect_box[0], rect_box[1], rect_box[2], rect_box[3]
-    box_corners = [(int(xmin), int(ymax)), (int(xmin), int(ymin)), (int(xmax), int(ymin)),
-                   (int(xmax), int(ymax))]  # bl, tl, tr, br
-    initial_box = [(int(xmin), int(ymin)), (int(xmax), int(ymin)),
-                   (int(xmax), int(ymax)), (int(xmin), int(ymax))]  # tl, tr, br,bl
-    act_box_corners = get_actual_bb(box_corners, img)
-    print("Initial  = ", initial_box)
+        # print(output_dict['detection_boxes'])
+        rect_box = output_dict['detection_boxes'][0] * np.array(
+            [img.shape[0], img.shape[1], img.shape[0], img.shape[1]])
+        ymin, xmin, ymax, xmax = rect_box[0], rect_box[1], rect_box[2], rect_box[3]
+        box_corners = [(int(xmin), int(ymax)), (int(xmin), int(ymin)), (int(xmax), int(ymin)),
+                       (int(xmax), int(ymax))]  # bl, tl, tr, br
+        initial_box = [(int(xmin), int(ymin)), (int(xmax), int(ymin)),
+                       (int(xmax), int(ymax)), (int(xmin), int(ymax))]  # tl, tr, br,bl
+        act_box_corners = get_actual_bb(box_corners, img)
 
-    print("Corniates = ", act_box_corners)
-    print(
-        "############################################################################################################")
+        cv2.imwrite('images/results/' + str(image_path).split("/")[-1], cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+        print("Initial  = ", initial_box)
+
+        print("Corniates = ", act_box_corners)
+        print(
+            "############################################################################################################")
+    except Exception as e:
+        pass

@@ -12,13 +12,16 @@ if not os.path.exists(dest_folder):
     if path[-1] != '/':
         path = path + '/'
     for file in os.listdir(path):
-        extension = file.split('.')[-1]
-        name = file.split('.')[0] + '.jpg'
-        fileLoc = path + file
-        img = Image.open(fileLoc)
-        new = Image.new("RGB", img.size, (255, 255, 255))
-        new.paste(img, None)  # save the new image with jpg as extension
-        new.save(dest_folder + "/" + name, 'JPEG', quality=100)
+        try:
+            extension = file.split('.')[-1]
+            name = file.split('.')[0] + '.jpg'
+            fileLoc = path + file
+            img = Image.open(fileLoc)
+            new = Image.new("RGB", img.size, (255, 255, 255))
+            new.paste(img, None)  # save the new image with jpg as extension
+            new.save(dest_folder + "/" + name, 'JPEG', quality=100)
+        except Exception as e:
+            pass
     shutil.rmtree(path)
 ########################################################################################################################
 # Excel to csv and train test split with respective csv

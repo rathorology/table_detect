@@ -3,8 +3,8 @@ import os
 import shutil
 from PIL import Image
 
-folder = "sreenshots"
-path = "raw_data/stupa_sreenshots"  # Source Folder
+folder = "screenshots"
+path = "raw_data/stupa_screenshots"  # Source Folder
 dest_folder = "raw_data/" + str(folder)
 if not os.path.exists(dest_folder):
     os.makedirs(dest_folder)

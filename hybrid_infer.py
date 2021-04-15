@@ -35,7 +35,7 @@ def display(img):
 
 def load_model():
     model_dir = pathlib.Path(
-        "checkpoint/content/table_detect/table_detection/exported-model/mobile-model") / "saved_model"
+        "checkpoint/content/table_detect/exported-model/mobile-model") / "saved_model"
 
     model = tf.saved_model.load(str(model_dir))
 

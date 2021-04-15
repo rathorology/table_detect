@@ -1,51 +1,124 @@
 filename,width,height,class,xmin,ymin,xmax,ymax
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/1.png,1280,720,table,418,373,1122,399
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/2.png,2340,1080,table,484,524,1851,607
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/3.png,2340,1080,table,451,522,1810,603
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/4.png,2340,1080,table,504,528,1842,611
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/5.png,2131,1080,table,485,557,1642,611
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/6.png,2340,1038,table,490,513,1862,584
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/7.png,2340,1080,table,528,536,1821,613
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/8.png,2340,1080,table,520,522,1813,589
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/9.png,2131,1080,table,484,545,1637,613
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/10.png,2131,1080,table,480,545,1637,614
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/11.png,2131,1080,table,479,547,1637,615
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/12.png,2340,1080,table,517,542,1847,608
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/13.png,2340,1080,table,496,536,1837,607
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/14.png,2340,1080,table,497,535,1837,606
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/15.png,2340,1080,table,508,536,1835,614
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/16.png,2131,1080,table,476,540,1655,625
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/17.png,2340,1080,table,581,548,1762,602
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/18.png,2340,1080,table,563,537,1780,595
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/19.png,2340,1080,table,561,534,1780,592
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/20.png,2285,1080,table,414,539,1881,610
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/21.png,2340,1080,table,461,537,1888,620
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/22.png,2204,1038,table,213,482,2021,631
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/23.png,2204,1038,table,213,488,2023,629
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/24.png,2340,1080,table,476,566,1859,632
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/25.png,2340,1080,table,469,564,1853,631
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/26.png,2159,1080,table,481,510,1675,649
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/27.png,2244,1080,table,504,536,1776,616
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/28.png,2141,1080,table,576,541,1713,623
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/29.png,2141,1080,table,455,557,1665,619
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/30.png,2340,1080,table,408,570,1926,635
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/31.png,2340,1080,table,421,565,1942,635
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/32.png,2340,1080,table,407,563,1910,642
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/33.png,2118,1080,table,491,530,1625,592
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/34.png,2118,1080,table,456,544,1594,605
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/35.png,2118,1080,table,456,543,1592,604
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/36.png,2118,1080,table,455,543,1593,603
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/37.png,2129,1080,table,216,549,1927,675
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/38.png,2129,1080,table,131,523,1979,674
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/39.png,2179,1080,table,510,530,1669,610
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/40.png,2179,1080,table,511,530,1670,611
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/41.png,2179,1080,table,510,531,1669,611
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/42.png,2179,1080,table,458,557,1727,763
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/43.png,2179,1080,table,416,550,1784,632
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/44.png,2131,1080,table,534,553,1601,615
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/45.png,2131,1080,table,529,543,1619,605
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/46.png,2131,1080,table,512,537,1609,599
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/47.png,2179,1080,table,542,567,1628,622
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/48.png,2179,1080,table,542,567,1631,622
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/49.png,2179,1080,table,542,567,1630,622
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/train/50.png,2179,1080,table,541,568,1629,622
+/home/machine/PycharmProjects/table_detect/images/train/karan 16.jpg,2131,1080,table,477,542,1654,625
+/home/machine/PycharmProjects/table_detect/images/train/karan 27.jpg,2244,1080,table,510,539,1770,615
+/home/machine/PycharmProjects/table_detect/images/train/karan 122.jpg,2179,1080,table,559,527,1625,590
+/home/machine/PycharmProjects/table_detect/images/train/karan 21.jpg,2340,1080,table,461,538,1885,619
+/home/machine/PycharmProjects/table_detect/images/train/karan 40.jpg,2179,1080,table,516,531,1662,609
+/home/machine/PycharmProjects/table_detect/images/train/karan 126.jpg,2179,1080,table,558,527,1627,590
+/home/machine/PycharmProjects/table_detect/images/train/karan 68.jpg,2179,1080,table,546,557,1624,611
+/home/machine/PycharmProjects/table_detect/images/train/karan 67.jpg,2179,1080,table,547,557,1624,611
+/home/machine/PycharmProjects/table_detect/images/train/karan 61.jpg,2168,1080,table,551,547,1616,600
+/home/machine/PycharmProjects/table_detect/images/train/karan 125.jpg,2179,1080,table,558,527,1625,590
+/home/machine/PycharmProjects/table_detect/images/train/karan 47.jpg,2179,1080,table,549,569,1624,622
+/home/machine/PycharmProjects/table_detect/images/train/karan 129.jpg,2179,1080,table,578,532,1591,588
+/home/machine/PycharmProjects/table_detect/images/train/karan 14.jpg,2340,1080,table,502,536,1833,606
+/home/machine/PycharmProjects/table_detect/images/train/karan 110.jpg,2168,1080,table,591,532,1580,588
+/home/machine/PycharmProjects/table_detect/images/train/karan 133.jpg,2179,1080,table,523,526,1643,591
+/home/machine/PycharmProjects/table_detect/images/train/karan 34.jpg,2118,1080,table,463,545,1588,604
+/home/machine/PycharmProjects/table_detect/images/train/karan 62.jpg,2179,1080,table,543,562,1629,614
+/home/machine/PycharmProjects/table_detect/images/train/karan 2.jpg,2340,1080,table,498,526,1842,607
+/home/machine/PycharmProjects/table_detect/images/train/karan 149.jpg,2340,1080,table,508,529,1813,605
+/home/machine/PycharmProjects/table_detect/images/train/karan 52.jpg,2179,1080,table,554,533,1625,584
+/home/machine/PycharmProjects/table_detect/images/train/karan 107.jpg,2168,1080,table,589,532,1582,587
+/home/machine/PycharmProjects/table_detect/images/train/karan 118.jpg,2179,1080,table,652,541,1521,587
+/home/machine/PycharmProjects/table_detect/images/train/karan 130.jpg,2179,1080,table,532,543,1648,605
+/home/machine/PycharmProjects/table_detect/images/train/karan 112.jpg,1920,1080,table,243,511,1718,661
+/home/machine/PycharmProjects/table_detect/images/train/karan 121.jpg,2179,1080,table,428,514,1664,638
+/home/machine/PycharmProjects/table_detect/images/train/karan 19.jpg,2340,1080,table,566,535,1774,591
+/home/machine/PycharmProjects/table_detect/images/train/karan 45.jpg,2131,1080,table,532,544,1612,604
+/home/machine/PycharmProjects/table_detect/images/train/karan 148.jpg,2340,1080,table,515,530,1814,606
+/home/machine/PycharmProjects/table_detect/images/train/karan 140.jpg,2179,1080,table,496,543,1694,627
+/home/machine/PycharmProjects/table_detect/images/train/karan 137.jpg,2179,1080,table,532,548,1654,614
+/home/machine/PycharmProjects/table_detect/images/train/karan 92.jpg,2340,1080,table,576,538,1757,601
+/home/machine/PycharmProjects/table_detect/images/train/karan 84.jpg,2179,1080,table,597,547,1630,596
+/home/machine/PycharmProjects/table_detect/images/train/karan 78.jpg,2340,1080,table,640,552,1726,626
+/home/machine/PycharmProjects/table_detect/images/train/karan 139.jpg,2179,1080,table,529,549,1653,616
+/home/machine/PycharmProjects/table_detect/images/train/karan 105.jpg,2179,1080,table,601,530,1581,579
+/home/machine/PycharmProjects/table_detect/images/train/karan 73.jpg,2179,1080,table,580,557,1608,616
+/home/machine/PycharmProjects/table_detect/images/train/karan 15.jpg,2340,1080,table,511,536,1830,613
+/home/machine/PycharmProjects/table_detect/images/train/karan 17.jpg,2340,1080,table,585,547,1760,601
+/home/machine/PycharmProjects/table_detect/images/train/karan 114.jpg,2168,1080,table,329,547,1875,655
+/home/machine/PycharmProjects/table_detect/images/train/karan 69.jpg,2168,1080,table,545,558,1639,618
+/home/machine/PycharmProjects/table_detect/images/train/karan 85.jpg,2179,1080,table,597,550,1633,600
+/home/machine/PycharmProjects/table_detect/images/train/karan 91.jpg,2179,1080,table,546,537,1648,609
+/home/machine/PycharmProjects/table_detect/images/train/karan 58.jpg,2179,1080,table,549,541,1619,592
+/home/machine/PycharmProjects/table_detect/images/train/karan 143.jpg,2179,1080,table,511,535,1730,626
+/home/machine/PycharmProjects/table_detect/images/train/karan 123.jpg,2179,1080,table,551,528,1618,590
+/home/machine/PycharmProjects/table_detect/images/train/karan 48.jpg,2179,1080,table,547,569,1625,623
+/home/machine/PycharmProjects/table_detect/images/train/karan 66.jpg,2168,1080,table,543,530,1638,586
+/home/machine/PycharmProjects/table_detect/images/train/karan 86.jpg,2179,1080,table,567,523,1587,565
+/home/machine/PycharmProjects/table_detect/images/train/karan 128.jpg,2179,1080,table,555,529,1623,592
+/home/machine/PycharmProjects/table_detect/images/train/karan 116.jpg,2179,1080,table,655,541,1525,587
+/home/machine/PycharmProjects/table_detect/images/train/karan 71.jpg,2168,1080,table,546,558,1640,618
+/home/machine/PycharmProjects/table_detect/images/train/karan 25.jpg,2340,1080,table,473,564,1845,629
+/home/machine/PycharmProjects/table_detect/images/train/karan 144.jpg,2179,1080,table,485,532,1704,611
+/home/machine/PycharmProjects/table_detect/images/train/karan 147.jpg,2340,1080,table,517,532,1815,608
+/home/machine/PycharmProjects/table_detect/images/train/karan 74.jpg,2118,1080,table,525,552,1584,609
+/home/machine/PycharmProjects/table_detect/images/train/karan 101.jpg,2179,1080,table,641,545,1541,589
+/home/machine/PycharmProjects/table_detect/images/train/karan 7.jpg,2340,1080,table,535,537,1815,613
+/home/machine/PycharmProjects/table_detect/images/train/karan 18.jpg,2340,1080,table,568,539,1777,595
+/home/machine/PycharmProjects/table_detect/images/train/karan 153.jpg,2340,1080,table,551,547,1766,609
+/home/machine/PycharmProjects/table_detect/images/train/karan 32.jpg,2340,1080,table,416,565,1902,641
+/home/machine/PycharmProjects/table_detect/images/train/karan 13.jpg,2340,1080,table,500,537,1831,608
+/home/machine/PycharmProjects/table_detect/images/train/karan 6.jpg,2340,583,table,498,515,1852,583
+/home/machine/PycharmProjects/table_detect/images/train/karan 51.jpg,2179,1080,table,545,569,1624,622
+/home/machine/PycharmProjects/table_detect/images/train/karan 28.jpg,2141,1080,table,580,542,1704,623
+/home/machine/PycharmProjects/table_detect/images/train/karan 23.jpg,2204,1038,table,218,489,2014,630
+/home/machine/PycharmProjects/table_detect/images/train/karan 97.jpg,2179,1080,table,637,547,1537,593
+/home/machine/PycharmProjects/table_detect/images/train/karan 111.jpg,2179,1080,table,557,533,1619,592
+/home/machine/PycharmProjects/table_detect/images/train/karan 134.jpg,2179,1080,table,549,544,1637,614
+/home/machine/PycharmProjects/table_detect/images/train/karan 88.jpg,2179,1080,table,538,529,1638,595
+/home/machine/PycharmProjects/table_detect/images/train/karan 80.jpg,2340,1080,table,612,549,1698,620
+/home/machine/PycharmProjects/table_detect/images/train/karan 43.jpg,2179,1080,table,419,551,1778,631
+/home/machine/PycharmProjects/table_detect/images/train/karan 135.jpg,2179,1080,table,553,534,1631,607
+/home/machine/PycharmProjects/table_detect/images/train/karan 20.jpg,2285,1080,table,414,541,1877,610
+/home/machine/PycharmProjects/table_detect/images/train/karan 42.jpg,2179,1080,table,460,558,1722,632
+/home/machine/PycharmProjects/table_detect/images/train/karan 108.jpg,2168,1080,table,589,531,1583,587
+/home/machine/PycharmProjects/table_detect/images/train/karan 115.jpg,2179,1080,table,678,546,1515,582
+/home/machine/PycharmProjects/table_detect/images/train/karan 31.jpg,2340,1080,table,428,567,1936,635
+/home/machine/PycharmProjects/table_detect/images/train/karan 138.jpg,2179,1080,table,530,550,1652,618
+/home/machine/PycharmProjects/table_detect/images/train/karan 151.jpg,2340,1080,table,558,552,1770,606
+/home/machine/PycharmProjects/table_detect/images/train/karan 82.jpg,2131,1080,table,476,548,1649,616
+/home/machine/PycharmProjects/table_detect/images/train/karan 26.jpg,2159,1080,table,485,513,1671,640
+/home/machine/PycharmProjects/table_detect/images/train/karan 24.jpg,2340,1080,table,482,566,1854,632
+/home/machine/PycharmProjects/table_detect/images/train/karan 95.jpg,2141,1080,table,504,579,1649,639
+/home/machine/PycharmProjects/table_detect/images/train/karan 8.jpg,2340,11080,table,529,524,1806,587
+/home/machine/PycharmProjects/table_detect/images/train/karan 39.jpg,2179,1080,table,519,532,1660,609
+/home/machine/PycharmProjects/table_detect/images/train/karan 81.jpg,2340,1080,table,642,552,1726,626
+/home/machine/PycharmProjects/table_detect/images/train/karan 117.jpg,2179,1080,table,658,542,1527,587
+/home/machine/PycharmProjects/table_detect/images/train/karan 83.jpg,2179,1080,table,559,554,1628,608
+/home/machine/PycharmProjects/table_detect/images/train/karan 70.jpg,2168,1080,table,546,558,1641,618
+/home/machine/PycharmProjects/table_detect/images/train/karan 35.jpg,2118,1080,table,466,545,1585,603
+/home/machine/PycharmProjects/table_detect/images/train/karan 59.jpg,2179,1080,table,567,555,1627,604
+/home/machine/PycharmProjects/table_detect/images/train/karan 64.jpg,2179,1080,table,544,561,1630,614
+/home/machine/PycharmProjects/table_detect/images/train/karan 12.jpg,2340,1080,table,524,543,1841,607
+/home/machine/PycharmProjects/table_detect/images/train/karan 53.jpg,2179,1080,table,555,533,1626,584
+/home/machine/PycharmProjects/table_detect/images/train/karan 98.jpg,2179,1080,table,635,546,1538,594
+/home/machine/PycharmProjects/table_detect/images/train/karan 3.jpg,2340,1080,table,458,523,1803,603
+/home/machine/PycharmProjects/table_detect/images/train/karan 136.jpg,2179,1080,table,542,550,1617,623
+/home/machine/PycharmProjects/table_detect/images/train/karan 119.jpg,2179,1080,table,650,542,1522,587
+/home/machine/PycharmProjects/table_detect/images/train/karan 9.jpg,2131,1080,table,491,546,1628,610
+/home/machine/PycharmProjects/table_detect/images/train/karan 65.jpg,2179,1080,table,551,547,1635,605
+/home/machine/PycharmProjects/table_detect/images/train/karan 44.jpg,2131,1080,table,538,554,1593,615
+/home/machine/PycharmProjects/table_detect/images/train/karan 79.jpg,2340,1080,table,610,549,1697,620
+/home/machine/PycharmProjects/table_detect/images/train/karan 46.jpg,2131,1080,table,517,538,1604,599
+/home/machine/PycharmProjects/table_detect/images/train/karan 113.jpg,2179,1080,table,623,547,1571,596
+/home/machine/PycharmProjects/table_detect/images/train/karan 106.jpg,2179,1080,table,603,538,1586,592
+/home/machine/PycharmProjects/table_detect/images/train/karan 154.jpg,2130,1080,table,233,481,1926,688
+/home/machine/PycharmProjects/table_detect/images/train/karan 33.jpg,2118,1080,table,496,532,1617,593
+/home/machine/PycharmProjects/table_detect/images/train/karan 72.jpg,2118,1080,table,523,552,1586,609
+/home/machine/PycharmProjects/table_detect/images/train/karan 87.jpg,2179,1080,table,567,523,1586,656
+/home/machine/PycharmProjects/table_detect/images/train/karan 38.jpg,2129,1080,table,142,524,1971,673
+/home/machine/PycharmProjects/table_detect/images/train/karan 75.jpg,2118,1080,table,533,556,1593,613
+/home/machine/PycharmProjects/table_detect/images/train/karan 11.jpg,2131,1080,table,485,548,1632,615
+/home/machine/PycharmProjects/table_detect/images/train/karan 37.jpg,2129,1080,table,227,550,1915,674
+/home/machine/PycharmProjects/table_detect/images/train/karan 131.jpg,2179,1080,table,532,543,1648,605
+/home/machine/PycharmProjects/table_detect/images/train/karan 96.jpg,2141,1080,table,505,579,1651,639
+/home/machine/PycharmProjects/table_detect/images/train/karan 103.jpg,2179,1080,table,646,538,1549,592
+/home/machine/PycharmProjects/table_detect/images/train/karan 127.jpg,2179,1080,table,559,527,1625,591
+/home/machine/PycharmProjects/table_detect/images/train/karan 10.jpg,2131,1080,table,484,546,1628,613
+/home/machine/PycharmProjects/table_detect/images/train/karan 4.jpg,2340,1080,table,512,529,1837,610
+/home/machine/PycharmProjects/table_detect/images/train/karan 145.jpg,2179,1080,table,486,531,1707,612
+/home/machine/PycharmProjects/table_detect/images/train/karan 36.jpg,2118,1080,table,464,544,1582,602
+/home/machine/PycharmProjects/table_detect/images/train/karan 93.jpg,2340,1080,table,579,537,1761,602
+/home/machine/PycharmProjects/table_detect/images/train/karan 90.jpg,2340,1080,table,589,538,1774,603

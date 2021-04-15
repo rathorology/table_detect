@@ -1,5 +1,32 @@
 filename,width,height,class,xmin,ymin,xmax,ymax
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/test/51.png,2179,1080,table,541,567,1630,623
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/test/52.png,2179,1080,table,548,532,1631,585
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/test/53.png,2179,1080,table,548,531,1633,584
-/root/mis/SSD-Mobilenet-Custom-Object-Detector-Model-using-Tensorflow-2/images/test/54.png,2179,1080,table,548,531,1633,584
+/home/machine/PycharmProjects/table_detect/images/test/karan 55.jpg,2179,1080,table,553,533,1624,584
+/home/machine/PycharmProjects/table_detect/images/test/karan 132.jpg,2179,1080,table,535,541,1652,605
+/home/machine/PycharmProjects/table_detect/images/test/karan 54.jpg,2179,1080,table,554,533,1626,584
+/home/machine/PycharmProjects/table_detect/images/test/karan 57.jpg,2179,1080,table,550,541,1621,592
+/home/machine/PycharmProjects/table_detect/images/test/karan 60.jpg,2168,1080,table,550,555,1628,610
+/home/machine/PycharmProjects/table_detect/images/test/karan 89.jpg,2340,1080,table,582,540,1768,602
+/home/machine/PycharmProjects/table_detect/images/test/karan 41.jpg,2179,1080,table,517,532,1663,609
+/home/machine/PycharmProjects/table_detect/images/test/karan 124.jpg,2179,1080,table,559,527,1626,590
+/home/machine/PycharmProjects/table_detect/images/test/karan 109.jpg,2168,1080,table,590,531,1582,588
+/home/machine/PycharmProjects/table_detect/images/test/karan 94.jpg,2179,1080,table,559,541,1541,660
+/home/machine/PycharmProjects/table_detect/images/test/karan 150.jpg,2340,1080,table,553,552,1768,606
+/home/machine/PycharmProjects/table_detect/images/test/karan 30.jpg,2340,1080,table,418,570,1919,635
+/home/machine/PycharmProjects/table_detect/images/test/karan 146.jpg,2179,1080,table,489,532,1708,612
+/home/machine/PycharmProjects/table_detect/images/test/karan 5.jpg,2131,1080,table,492,558,1637,611
+/home/machine/PycharmProjects/table_detect/images/test/karan 152.jpg,2340,1080,table,550,535,1762,592
+/home/machine/PycharmProjects/table_detect/images/test/karan 22.jpg,2204,1038,table,215,482,2013,630
+/home/machine/PycharmProjects/table_detect/images/test/karan 63.jpg,2179,1080,table,536,544,1626,599
+/home/machine/PycharmProjects/table_detect/images/test/karan 100.jpg,2179,1080,table,638,526,1560,574
+/home/machine/PycharmProjects/table_detect/images/test/karan 77.jpg,2340,1080,table,598,549,1732,618
+/home/machine/PycharmProjects/table_detect/images/test/karan 141.jpg,2179,1080,table,476,531,1696,618
+/home/machine/PycharmProjects/table_detect/images/test/karan 50.jpg,2179,1080,table,546,568,1623,623
+/home/machine/PycharmProjects/table_detect/images/test/karan 102.jpg,2179,1080,table,643,542,1542,585
+/home/machine/PycharmProjects/table_detect/images/test/karan 1.jpg,2131,1080,table,591,561,1562,599
+/home/machine/PycharmProjects/table_detect/images/test/karan 120.jpg,2179,1080,table,653,541,1522,587
+/home/machine/PycharmProjects/table_detect/images/test/karan 56.jpg,2179,1080,table,524,550,1651,614
+/home/machine/PycharmProjects/table_detect/images/test/karan 76.jpg,2118,1080,table,528,555,1590,620
+/home/machine/PycharmProjects/table_detect/images/test/karan 29.jpg,2141,1080,table,456,559,1659,619
+/home/machine/PycharmProjects/table_detect/images/test/karan 49.jpg,2179,1080,table,548,569,1622,622
+/home/machine/PycharmProjects/table_detect/images/test/karan 99.jpg,2179,1080,table,639,527,1562,574
+/home/machine/PycharmProjects/table_detect/images/test/karan 142.jpg,2179,1080,table,477,532,1696,618
+/home/machine/PycharmProjects/table_detect/images/test/karan 104.jpg,2179,1080,table,645,524,1538,575

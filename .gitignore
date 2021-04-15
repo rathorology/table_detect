@@ -3,3 +3,5 @@ venv
 models/
 object_detection/
 official/
+images
+raw_data

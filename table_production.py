@@ -4,39 +4,25 @@ import time
 from math import sqrt
 import sys
 import warnings
-import cv2
-
 if not sys.warnoptions:
     warnings.simplefilter("ignore")
 import cv2
 import extcolors
 import numpy as np
-import tensorflow as tf
 from PIL import Image
-# get_ipython().run_line_magic('matplotlib', 'inline')
-from matplotlib import pyplot as plt
-
-from object_detection.utils import label_map_util
 from object_detection.utils import ops as utils_ops
-
+import tensorflow as tf
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
-# patch tf1 into `utils.ops`
-utils_ops.tf = tf.compat.v1
 
-# Patch the location of gfile
-tf.gfile = tf.io.gfile
-
-
-def display(img):
-    # plt.rcParams["figure.figsize"] = (100, 100)
-    plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-    plt.show()
+# def display(img):
+#     # plt.rcParams["figure.figsize"] = (100, 100)
+#     plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+#     plt.show()
 
 
-def load_model():
-    model_dir = pathlib.Path(
-        "checkpoint/content/table_detect/exported-model/mobile-model") / "saved_model"
+def load_model(model_path):
+    model_dir = pathlib.Path(model_path) / "saved_model"
 
     model = tf.saved_model.load(str(model_dir))
 
@@ -247,55 +233,49 @@ def get_actual_bb(box_corners, img):
     return [bl, tl, tr, br]
 
 
-def infer_wrapper(path):
-    detection_model = load_model()
+def infer_wrapper(path, model_path):
+    detection_model = load_model(model_path)
+    cv_img = None
     cap = cv2.VideoCapture(path)
     while cap.isOpened():
         ret, cv_img = cap.read()
         if cv_img is not None:
             break
-    # try:
-    st = time.time()
-    # the array based representation of the image will be used later in order to prepare the
-    # result image with boxes and labels on it.
-    img = np.array(cv_img)
-    # Actual detection.
-    output_dict = run_inference_for_single_image(detection_model, img)
+    try:
+        st = time.time()
+        # the array based representation of the image will be used later in order to prepare the
+        # result image with boxes and labels on it.
+        img = np.array(cv_img)
+        # Actual detection.
+        output_dict = run_inference_for_single_image(detection_model, img)
 
-    # print(output_dict['detection_boxes'])
-    rect_box = output_dict['detection_boxes'][0] * np.array(
-        [img.shape[0], img.shape[1], img.shape[0], img.shape[1]])
-    ymin, xmin, ymax, xmax = rect_box[0], rect_box[1], rect_box[2], rect_box[3]
-    box_corners = [(int(xmin), int(ymax)), (int(xmin), int(ymin)), (int(xmax), int(ymin)),
-                   (int(xmax), int(ymax))]  # bl, tl, tr, br
-    initial_box = [(int(xmin), int(ymin)), (int(xmax), int(ymin)),
-                   (int(xmax), int(ymax)), (int(xmin), int(ymax))]  # tl, tr, br,bl
-    the_box = get_actual_bb(box_corners, img)
+        # print(output_dict['detection_boxes'])
+        rect_box = output_dict['detection_boxes'][0] * np.array(
+            [img.shape[0], img.shape[1], img.shape[0], img.shape[1]])
+        ymin, xmin, ymax, xmax = rect_box[0], rect_box[1], rect_box[2], rect_box[3]
+        box_corners = [(int(xmin), int(ymax)), (int(xmin), int(ymin)), (int(xmax), int(ymin)),
+                       (int(xmax), int(ymax))]  # bl, tl, tr, br
+        initial_box = [(int(xmin), int(ymin)), (int(xmax), int(ymin)),
+                       (int(xmax), int(ymax)), (int(xmin), int(ymax))]  # tl, tr, br,bl
+        the_box = get_actual_bb(box_corners, img)
 
-    cv2.imwrite('images/results/' + str(path).split("/")[-1].split(".")[0]+".jpg", cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-    print("Initial  = ", initial_box)
+        cv2.imwrite('images/results/' + str(path).split("/")[-1].split(".")[0] + ".jpg",
+                    cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+        print("Initial  = ", initial_box)
 
-    print("Corniates = ", the_box)
-    print(
-        "############################################################################################################")
-    # except Exception as e:
-    #     the_box = list()
-    #     pass
+        print("Corniates = ", the_box)
+        print(
+            "############################################################################################################")
+    except Exception as e:
+        the_box = list()
+        pass
     return the_box
 
 
 if __name__ == '__main__':
-    # # List of the strings that is used to add correct label for each box.
-    # PATH_TO_LABELS = 'training/object-detection.pbxt'
-    # category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS, use_display_name=True)
-
-    # If you want to test the code with
-    # images, just add path to the images to the TEST_IMAGE_PATHS.
-    PATH_TO_TEST_IMAGES_DIR = pathlib.Path('images/validation')
-    TEST_IMAGE_PATHS = sorted(list(PATH_TO_TEST_IMAGES_DIR.glob("*.jpg")))
-    print(TEST_IMAGE_PATHS)
-    path = "images/video/ajay_pundir_1101_1603867188525_611_1.mp4"
-
+    path = "/home/machine/PycharmProjects/AI-Development/aditya/videos/ajay_pundir_1101_1603867188525_611_1.mp4"
+    model_path = "checkpoint/content/table_detect/exported-model/mobile-model"
     s = time.time()
-    infer_wrapper(path)
+    the_box = infer_wrapper(path, model_path)
+    print(the_box)
     print(time.time() - s)

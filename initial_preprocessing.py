@@ -35,15 +35,22 @@ train, test = train_test_split(df, test_size=0.2, shuffle=True)
 train_path = train['name'].tolist()
 test_path = test['name'].tolist()
 
-if not os.path.exists("images"):
-    os.makedirs("images")
-    os.makedirs("images/train")
-    os.makedirs("images/test")
-    os.makedirs("images/results")
+shutil.rmtree("images")
+os.makedirs("images")
+os.makedirs("images/train")
+os.makedirs("images/test")
+os.makedirs("images/results")
 
+try:
     for imageName in train_path:
+        imageName = "".join(imageName.split())
         shutil.copy(os.path.join(dest_folder, imageName), "images/train")
     for imageName in test_path:
+        imageName = "".join(imageName.split())
         shutil.copy(os.path.join(dest_folder, imageName), "images/test")
-    train.to_csv("images/train/train.csv", index=False)
-    test.to_csv("images/test/test.csv", index=False)
+except Exception as e:
+    print("bc")
+
+
+train.to_csv("images/train/train.csv", index=False)
+test.to_csv("images/test/test.csv", index=False)
